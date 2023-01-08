@@ -16,12 +16,12 @@ class Solution(object):
         :rtype: int
         """
         def getAngles(p1,p2):
-            ydiff=p2[1]-p1[1]
-            xdiff=p2[0]-p1[0]
+            y=p2[1]-p1[1]
+            x=p2[0]-p1[0]
             
-            if xdiff==0:
+            if x==0:
                 return sys.maxsize
-            return float(ydiff)/float(xdiff)
+            return float(y)/float(x)
             if angles<360:
                 angles+=360
             return angles
