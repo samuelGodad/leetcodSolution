@@ -1,12 +1,8 @@
 # Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane, return the maximum number of points that lie on the same straight line.
 # Input: points = [[1,1],[2,2],[3,3]]
 # Output: 3
- 
-
-
-
-from collections import defaultdict
-import math
+import sys
+from collections import defaultdict, Counter
 
 # from typing import DefaultDict, List, Tuple
 class Solution(object):
@@ -38,7 +34,7 @@ class Solution(object):
                         same+=1
                     else:
                         angles.append(getAngles(p1,p2))
-            counter=Counter(angles)
+            counter = Counter(angles)
             max1=0
             if counter.values():
                 max1= max(counter.values())
